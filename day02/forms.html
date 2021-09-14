@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <!-- 
+        GET -> pass form data in URL as Query Parameters (256 characters)
+        Path Params, Header Params
+        POST -> pass form data in Request Body as FormData
+     -->
+    <form action="/register.php" method="GET">
+        <input type="text" name="username" value="nishat" placeholder="Enter Name" maxlength="10" minlength="2" pattern="[a-z]{2,}"/>
+        <input name="age" type="number" value="8" placeholder="Age" min="0" max="10"/>
+        <input name="doj" type="date" />
+        <input type="datetime-local"  />
+        <input type="checkbox" checked /> Accept Terms and Conditions
+        <input type="radio" name="gender"  /> Male
+        <input type="radio" name="gender" /> Female
+        <input type="radio" name="gender" /> Others
+        <input type="radio" name="fruit" /> Apple
+        <input type="radio" name="fruit" /> Mango
+        <input type="radio" name="fruit" /> Banana
+        Groceries
+        <input type="checkbox" name="groceries" /> Spinach
+        <input type="checkbox" name="groceries" /> Utensils
+        <input type="checkbox" name="groceries" /> Cupboard
+
+        <input type="color" />
+        <input type="range" min="0" max="100" step="10"/>
+        <input type="email" placeholder="abc@xyz.com" />
+        <input type="file" multiple />
+        <input type="password" />
+        <input type="time"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

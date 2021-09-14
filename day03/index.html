@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+</head>
+
+<body>
+    <!-- 
+        Cascading Style Sheets -> CSS3
+    -->
+    <!-- 
+        Selectors
+        Properties
+        3 ways to write CSS styles
+        1- Style Tag
+
+     -->
+    <style>
+        /* Element Selector */
+        div {
+            /* Properties */
+            background-color: red;
+
+        }
+
+        p {
+            text-transform: uppercase;
+        }
+
+        /* ID Selector */
+        #again {
+            color: white;
+            background-color: green;
+        }
+
+        /* Class Selector */
+        button {
+            height: 30px;
+        }
+
+        .type-1 {
+            text-transform: uppercase;
+            border: none;
+            background: green;
+            color: white;
+        }
+
+        .type-2 {
+            background-color: rebeccapurple;
+            text-transform: lowercase;
+            text-decoration: dotted;
+            color: white;
+        }
+
+        #about {
+            font-weight: bold;
+            border-radius: 10px;
+        }
+    </style>
+    <div>
+        Hello World
+    </div>
+    <div id="again">
+        Hello World again!
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iure inventore, sed rem autem accusantium veniam
+        delectus quo porro iusto tempora numquam, cumque enim ratione harum amet saepe. Deserunt, molestias.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iure inventore, sed rem autem accusantium veniam
+        delectus quo porro iusto tempora numquam, cumque enim ratione harum amet saepe. Deserunt, molestias.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iure inventore, sed rem autem accusantium veniam
+        delectus quo porro iusto tempora numquam, cumque enim ratione harum amet saepe. Deserunt, molestias.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iure inventore, sed rem autem accusantium veniam
+        delectus quo porro iusto tempora numquam, cumque enim ratione harum amet saepe. Deserunt, molestias.</p>
+    <button class="type-1">Home</button>
+    <button class="type-1" id="about">About</button>
+    <button class="type-1">Careers</button>
+    <button class="type-2">Gallery</button>
+    <button class="type-2">Contact</button>
+    <style>
+        /* Margin and Padding -> Spacers */
+        /* Margin is space around the element */
+        /* Padding is space within the element */
+        .margin {
+            margin: 10px 20px;
+        }
+        .padding {
+            padding: 10px 20px;
+        }
+        .bordered {
+            margin-top: 20px;
+            border: 1px solid blue;
+            border-radius: 5px 0px;
+            padding: 5px;
+            width: 100px;
+        }
+        .square {
+            background-color: royalblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+    <div class="margin">
+        This div has a margin
+    </div>
+    <div class="padding">
+        This div has a padding
+    </div>
+    <div class="bordered">
+        This div has a border
+    </div>
+    <div class="square"></div>
+
+
+    <style>
+        /* 
+            CSS Units
+            Pixel -px
+            1280x720 ->
+            1366x768
+            1920x1080 pixel -> 100px
+            4k -> 3840 x 2160 pixel
+            8k -> 7680 × 4320 px
+
+            Percentage - % -> Renders based on parent container size
+
+            viewport width (vw), viewport height (vh) -> Relative to the viewport (browser window size)
+        */
+        .pixel {
+            width: 50%;
+            height: 100px;
+        }
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+        }
+        .percentage {
+            width: 75%;
+            height: 50%;
+            background-color: green;
+
+        }
+        .viewport {
+            width: 75vw;
+            height: 10vh;
+            background-color: green;
+
+        }
+    </style>
+
+    <div class="pixel">
+        <div class="small"></div>
+    </div>
+    <div class="pixel">
+        <div class="percentage"></div>
+    </div>
+
+    <div class="viewport">
+
+    </div>
+    <style>
+        html {
+            font-size: 5px;
+        }
+        .some-class {
+            font-size: 26px;
+        }
+        .ems {
+            font-size: 2em;
+        }
+        .rems {
+            font-size: 2rem;
+        }
+    </style>
+    <div class="some-class">
+        <p class="ems">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolorem eum delectus qui ea reprehenderit optio ad sed animi, non at iusto quae voluptate! Commodi veniam aut quisquam distinctio quasi.</p>
+        <p class="rems">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolorem eum delectus qui ea reprehenderit optio ad sed animi, non at iusto quae voluptate! Commodi veniam aut quisquam distinctio quasi.</p>
+    </div>
+</body>
+
+</html>

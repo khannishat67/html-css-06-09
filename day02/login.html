@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="login.php"  method="GET">
+        <select name="domain" >
+            <!-- URL Encoding -> convert special characters to url friendly way -->
+            <optgroup label="Cognizant">
+                <option value="cde/">cde/</option>
+                <option value="cdb/">cdb/</option>
+                <option value="cis/">cis/</option>
+            </optgroup>
+            <optgroup label="Client">
+                <option value="wf/">wf/</option>
+                <option value="amex/">amex/</option>
+                <option value="jpmc/">jpmc/</option>
+
+            </optgroup>
+        </select>
+        <input name="username"  value="somevalue" type="text" autofocus placeholder="username" />
+        <small id="username-error"></small>
+        <input type="password" name="password" placeholder="password" />
+        <small id="password-error"></small>
+
+        <input type="submit" value="Login" />
+        <input type="reset" value="Reset" />
+    </form>
+    <script>
+        // function validate(event) {
+        //     // event.preventDefault();
+        //     var form = document.forms[0];
+        //     if (form["username"].value.length < 3) {
+        //         var uerror = document.getElementById("username-error")
+        //         uerror.innerText = "Username cannot be less than 3 characters"
+        //         return false;
+        //     }
+        //     if (form["password"].value.length < 8) {
+        //         var perror = document.getElementById("password-error")
+        //         perror.innerText = "Password cannot be less than 8 characters"
+        //         return false;
+        //     }
+
+        //     return true;
+        // }
+        var form = document.forms[0]
+        var username = form["username"]
+        username.addEventListener('input', function(event) {
+            console.log(event.target);
+            var err = document.getElementById("username-error");
+            if (event.target.value.length < 8) {
+                a=10
+                b=30
+                // String template
+                err.innerText = `Value cannot   be less than 8 
+                characters ${a+b} ${b}`
+            } else {
+                err.innerHTML = ""
+            }
+        })
+        
+        
+    </script>
+</body>
+</html>

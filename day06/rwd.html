@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+</head>
+<body>
+    <style>
+        /* #main {
+            height: 400px;
+            width: 100vw;
+            background-color: green;
+        } */
+        /*
+        xs - Extra small devices
+        sm - Small devices
+        md - Medium devices
+        lg - Large devices
+        xl - Extra large devices 4k screens
+
+        Mobile First
+        media
+        */
+        /* @media screen and (max-width: 1600px) {
+            #main {
+                background-color: grey;
+            }
+            
+        }
+        @media screen and (max-width: 1024px) {
+            #main {
+                background-color: yellow;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            #main {
+                background-color: red;
+            }
+        } */
+       
+    </style>
+    
+    <!-- <div id="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reiciendis adipisci iusto, distinctio odit suscipit neque quod quia blanditiis molestias itaque laudantium. Explicabo eos quos, recusandae ducimus veniam omnis est!
+    </div> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .column  {
+            margin: 2px;
+            background-color: gray;
+            color: white;
+            height: 50px;
+        }
+
+        .grid .column {
+            display: inline-block;
+        }
+        @media screen and (min-width: 400px ) and (max-width:768px) {
+            .column {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 768px ) and (max-width:1024px) {
+            .column {
+                width: 40%;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            .column {
+                width: 25%;
+            }
+        }
+        @media screen and (min-width: 400px){
+            .md {
+                display: none;
+            }
+            .sm {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 768px){
+            .md {
+                display: block;
+            }
+            .sm {
+                display: none;
+            }
+        }
+    </style>
+    <div class="grid">
+        <div class="column">Some Content 1</div>
+        <div class="column">Some Content 2</div>
+        <div class="column">Some Content 3</div>
+        <div class="column">Some Content 4</div>
+    </div>
+    <div class="navbar">
+        <ul class="md">
+            <li>Home</li>
+            <li>About</li>
+            <li>Careers</li>
+        </ul>
+        <ul class="sm">
+           <li>Menu</li> 
+        </ul>
+    </div>
+</body>
+</html>

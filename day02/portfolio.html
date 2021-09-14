@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <style>
+        nav {
+            display: block;
+            height: 60px;
+            background-color: gray;
+            position: static;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        nav span {
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        ul {
+            display: inline;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: right;
+        }
+        li {
+            display: inline-block;
+            height: 60px;
+            background-color: grey;
+            padding: 0 15px;
+            margin: 0;
+        }
+        a {
+            line-height: 60px;
+            color: white;
+            text-decoration: none;
+        }
+        /*  */
+    </style>
+    <header>
+        <nav>
+            <span>Portfolio</span>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        #home {
+            height: 500px;
+            background: cyan;
+        }
+        #about {
+            height: 500px;
+            background: red;
+        }
+        #gallery {
+            height: 500px;
+            background: blue;
+        }
+        #contact {
+            height: 500px;
+            background: green;
+        }
+        #goUp {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+        }
+    </style>
+    <div id="home">
+        <h1>Home</h1>
+    </div>
+    <div id="about">
+        <h1>About</h1>
+    </div>
+    <div id="gallery">
+        <h1>Gallery</h1>
+        <a href="../day01/images/footerbg.png"><img width="400px" height="400px" src="../day01/images/footerbg.png" /></a>
+        <video width="400" controls>
+            <source src="mov_bbb.mp4" type="video/mp4">
+            <source src="mov_bbb.ogg" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+    <div id="contact">
+        <h1>Contact</h1>
+    </div>
+    <div id="goUp">
+        <a href="#home">Go Up</a>
+    </div>
+</body>
+</html>

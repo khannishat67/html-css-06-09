@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External StyleSheet - 3 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CSS Deep</title>
+</head>
+<body>
+    <!-- Style Tag - 2 -->
+    <style>
+        div {
+            background-color: red;
+        }
+    </style>
+    
+    <!-- Inline Style - Top Priority -->
+    <div style="background-color: blue;"></div>
+    <div ></div>
+    <span style="background-color: green;">Hello World</span>
+    <!-- 
+        Block level element -> Element will take full width of the parent, div, p
+        Inline element -> element will take width of the content, span, b, u, a, img, input
+    -->
+    <!-- Display -->
+    <style>
+        div {
+            display: grid;  
+        }
+    </style>
+    <div>
+        <div>Hello WOrld</div>
+        <div>Hello WOrld</div>
+        <div>Hello WOrld</div>
+    </div>
+    <span  style="background-color: green;">Hello World</span>
+    <!-- Position -->
+    <style>
+        section {
+            position: static;
+            width: 100px;
+            top: 0;
+            background-color: aqua;
+        }
+    </style>
+    <div style="height: 600px;">
+        lkhawefhwoifhowf
+        k;awughfeuawj
+
+        <section>
+            <!-- Position absolute will place the element wrt position relative parent else position wrt the document -->
+        </section>
+
+    </div>
+    <div>jhfhkgf</div>
+</body>
+</html>

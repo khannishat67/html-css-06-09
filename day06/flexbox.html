@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+        .parent {
+            display: flex;
+            height: 900px;
+            flex-direction: column;
+            background-color: gray;
+            /* Main axis */
+            justify-content: flex-start;
+            /* Cross axis */
+            align-items:flex-start;
+        }
+        .child {
+            background-color: aqua;
+            flex: 0 0 300px;
+        }
+
+    </style>
+    <div id="main">
+        <div class="child font-size-26">Child 1</div>
+        <div class="child something">Child 2</div>
+        <div class="child m-t-8">Child 3</div>
+        <div class="something">Sibling</div>
+        <ul>
+            <li>Something</li>
+            <li>Something</li>
+            <li>Something</li>
+        </ul>
+    </div>
+</body>
+</html>

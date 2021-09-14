@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <div id="main">Hello World</div>
+    <p class="p">Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Adipisci similique nesciunt molestiae magni quam rerum porro fugit eaque eum aperiam aliquid laborum quae doloremque reprehenderit officia, quasi perferendis molestias labore!</p>
+    <p class="p">Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Adipisci similique nesciunt molestiae magni quam rerum porro fugit eaque eum aperiam aliquid laborum quae doloremque reprehenderit officia, quasi perferendis molestias labore!</p>
+    <p class="p">Lorem ipsum dolor sit <span>amet</span> consectetur adipisicing elit. Adipisci similique nesciunt molestiae magni quam rerum porro fugit eaque eum aperiam aliquid laborum quae doloremque reprehenderit officia, quasi perferendis molestias labore!</p>
+<!-- DOM - Document Object Model -->
+    <script>
+        console.log("Application started")
+        console.log(document)
+        // Id Access
+        var main = document.getElementById("main")
+        console.log(main);
+        main.style.border = '1px solid red';
+        // Class Access
+        var ps = document.getElementsByClassName("p")
+        console.log(ps);
+
+        // Tag name
+        var tags = document.getElementsByTagName("span")
+        console.log(tags);
+    </script>
+
+
+</body>
+</html>

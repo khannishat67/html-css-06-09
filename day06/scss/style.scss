@@ -1,0 +1,32 @@
+/*Variables*/
+@import './colors';
+@import './sizes';
+@import './borders';
+@mixin theme($theme: black) {
+    background: $theme;
+    color: invert($color: $theme);
+}
+#main {
+    @include theme($theme: white);
+    height: 100px;
+    border: $secondary-border;
+    >li {
+        color: $danger;
+    }
+}
+.child {
+    +.something {
+        font-weight: bold;
+    }
+}
+
+$spaceamounts: (8, 16px); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px;
+        }
+
+    }
+}

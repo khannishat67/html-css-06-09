@@ -1,0 +1,52 @@
+/*Variables*/
+.font-size-26 {
+  font-size: 26px;
+}
+
+#main {
+  background: white;
+  color: black;
+  height: 100px;
+  border: 1px solid #0ff0ff;
+}
+#main > li {
+  color: #ff0000;
+}
+
+.child + .something {
+  font-weight: bold;
+}
+
+.m-t-8 {
+  margin-top: 8px;
+}
+
+.m-b-8 {
+  margin-bottom: 8px;
+}
+
+.m-l-8 {
+  margin-left: 8px;
+}
+
+.m-r-8 {
+  margin-right: 8px;
+}
+
+.m-t-16px {
+  margin-top: 16pxpx;
+}
+
+.m-b-16px {
+  margin-bottom: 16pxpx;
+}
+
+.m-l-16px {
+  margin-left: 16pxpx;
+}
+
+.m-r-16px {
+  margin-right: 16pxpx;
+}
+
+/*# sourceMappingURL=style.css.map */

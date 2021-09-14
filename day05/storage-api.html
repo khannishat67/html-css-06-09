@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage API</title>
+</head>
+<body>
+    <div id="local-storage"></div>
+    <div id="session-storage"></div>
+    <script>
+        // localStorage.setItem("local","Nishat Khan")
+        // sessionStorage.setItem("session", "Khan Nishat");
+        var local = document.getElementById("local-storage")
+        var session = document.getElementById("session-storage")
+        local.innerText = localStorage.getItem("local")
+        session.innerText = sessionStorage.getItem("session")
+    </script>
+</body>
+
+</html>

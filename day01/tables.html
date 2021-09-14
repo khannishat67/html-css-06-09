@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+
+<body>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+    </style>
+    <p style="text-align: center;">Bank Statement</p>
+    <table style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>Txn Id</th>
+                <th>Txn Date</th>
+                <th>Txn Amount</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>06/09/21</td>
+                <td style="text-align: center;">2000Cr</td>
+                <td>5000.0</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>05/09/21</td>
+                <td>3000Db</td>
+                <td style="text-align: right;">5000.0</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>04/09/21</td>
+                <td>4000Db</td>
+                <td>5000.0</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>Txn Date</th>
+                <th>Txn Id</th>
+                <th>Txn Amount</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">06/09/21</td>
+                <td>1</td>
+                <td>2000Cr</td>
+                <td>5000.0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>7000Cr</td>
+                <td>5000.0</td>
+            </tr>
+
+            <tr>
+                <td>05/09/21</td>
+                <td>3</td>
+                <td colspan="2">3000Db</td>
+            </tr>
+
+            <tr>
+                <td>04/09/21</td>
+                <td>4</td>
+                <td>4000Db</td>
+                <td>5000.0</td>
+            </tr>
+            <tr>
+                <td colspan="3">Nested</td>
+                <td>
+
+                <table style="border: 1px solid black;">
+                    <thead>
+                        <tr>
+                            <th>Txn Date</th>
+                            <th>Txn Id</th>
+                            <th>Txn Amount</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">06/09/21</td>
+                            <td>1</td>
+                            <td>2000Cr</td>
+                            <td>5000.0</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>7000Cr</td>
+                            <td>5000.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td>05/09/21</td>
+                            <td>3</td>
+                            <td colspan="2">3000Db</td>
+                        </tr>
+            
+                        <tr>
+                            <td>04/09/21</td>
+                            <td>4</td>
+                            <td>4000Db</td>
+                            <td>5000.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

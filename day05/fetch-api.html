@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+        // Promises return data once
+        // then, catch
+        var prom = new Promise((resolve, reject) => {
+            setTimeout(() => 
+            // var someVal = fn()
+            resolve("Data is resolve"),
+            5000
+            )
+        })
+        var prom2 = new Promise((resolve, reject) => {
+            setTimeout(() => 
+            resolve("Data is resolve2"),
+            4000
+            )
+        })
+        var prom3 = new Promise((resolve, reject) => {
+            setTimeout(() => 
+            resolve("Data is resolve2"),
+            4500
+            )
+        })
+        Promise.all([prom, prom2, prom3]).then(res => console.log(res))
+        Promise.any([prom, prom2, prom3]).then(res => console.log(res))
+        prom.then((res) =>console.log(res)).catch(err => console.log(err))
+        fetch("http://dummy.restapiexample.com/api/v1/employees") // a
+        .then((res) => {
+            console.log("Converting to json");
+            return res.json()
+        }) // c
+        .then(data => console.log(data)) //d
+        .catch(err => console.error("Got this error",err))//e
+        console.log("Hello World"); // b
+
+
+        var allEmp = fetch("http://dummy.restapiexample.com/api/v1/employees")
+        var emp2 = fetch("http://dummy.restapiexample.com/api/v1/employee/2")
+        Promise.all([allEmp, emp2]).then(res => console.log(res))
+
+        fetch("http://dummy.restapiexample.com/api/v1/employees", {
+            method: "POST",
+            body: JSON.stringify({
+                username: "something"
+            }),
+            headers: {
+                'Authorization': 'Bearer abcd',
+                'Content-Type': 'application/json'
+            },
+
+        }).then((res) => console.log(res))
+
+        // for(var i=0;i<100000;i++) {
+        //     console.log("Big task");
+        // }
+        // a -> b -> d -> 
+        // Promises -> Asynchronous Programming
+        // JS is single threaded a-> b -> c, a-> c -> d->b
+        // a (set event listener, task d) -> b(log hello) ->d-> c(log completed)
+        // a -> c -> b -> 
+        // Event loop
+/*         var button = document.getElementById("btn")
+        button.addEventListener("click", () => console.log("Clicked"))
+        console.log("Hello World");
+        setTimeout(() => 
+        console.log("Task completed"), 5000
+        ) */
+    </script>
+</body>
+</html>
